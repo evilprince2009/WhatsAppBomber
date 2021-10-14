@@ -9,20 +9,25 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws AWTException, InterruptedException {
+        final int interval = 2000;
         Scanner buffer = new Scanner(System.in);
-        Robot robot = new Robot();
-
         System.out.println("Enter your spam text");
         String message = buffer.nextLine();
         System.out.println("Enter how many times you want to spam");
         int times = buffer.nextInt();
+        buffer.close();
+        System.out.println("Bombing starts in a moment ...!");
+        Bomb(message, times, interval);
+    }
+
+    private static void Bomb(String message, int times, int interval) throws InterruptedException, AWTException {
+        Robot robot = new Robot();
         StringSelection selectedString = new StringSelection(message);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selectedString, null);
-        System.out.println("Bombing starts in 2 seconds ...!");
-        Thread.sleep(5000);
+        Thread.sleep(interval);
         for (int i = 0; i < times; i++) {
-            Thread.sleep(5000);
+            Thread.sleep(interval);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -31,6 +36,4 @@ public class Main {
             robot.keyRelease(KeyEvent.VK_ENTER);
         }
     }
-
-    
 }
