@@ -1,4 +1,4 @@
-package com.whatsappbomber;
+
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
