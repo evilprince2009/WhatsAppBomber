@@ -1,4 +1,4 @@
-
+package com.whatsappbomber;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -7,7 +7,6 @@ import java.awt.event.KeyEvent;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) throws AWTException, InterruptedException {
         final int interval = 2000;
         Scanner buffer = new Scanner(System.in);
