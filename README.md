@@ -31,4 +31,4 @@ I'm running it from IntelliJ IDEA.
 
 ![spam](https://github.com/evilprince2009/WhatsAppBomber/blob/main/Images/result.png)
 
-### [Ibne Nahian](https://evilprince2009.netlify.app)
+### _[Ibne Nahian](https://evilprince2009.netlify.app)_
